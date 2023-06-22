@@ -33,7 +33,7 @@
       <section
         class="main-section container d-flex justify-content-center gap-5 mt-5"
       >
-        <form>
+        <div>
           <div class="form__action d-flex gap-2 align-items-center mb-3">
             <h2>Recent scores</h2>
             <input
@@ -50,8 +50,8 @@
               </tbody>
             </table>
           </div>
-        </form>
-        <form class="add-score-container d-flex flex-column gap-3">
+        </div>
+        <div class="add-score-container d-flex flex-column gap-3">
           <h3>Add your score</h3>
           <input
             type="text"
@@ -69,12 +69,12 @@
             required
           />
           <input
-            type="submit"
+            type="button"
             class="align-self-end btn btn-success"
             value="Submit"
             data-submit-new-score
           />
-        </form>
+        </div>
       </section>
     </main>
     <script
