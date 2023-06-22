@@ -9,8 +9,6 @@
       content="website displays scores submitted by different players"
     />
     <meta name="author" content="Arturo Emanuel Guerra Iturres" />
-    <link rel="icon" href="" type="image/png" />
-    <link rel="apple-touch-icon" href="" type="image/png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,10 +16,10 @@
       crossorigin="anonymous"
     />
     <title>Leaderboard</title>
-  <script defer src="bundle.9455b622116e1dcb6a54.js"></script></head>
+  <link rel="icon" href="assets/favicon.png"><script defer src="bundle.24c02d22fb8f9a492be8.js"></script></head>
   <body>
     <main
-      class="container d-flex flex-column justify-content-start vh-100 mt-5"
+      class="container d-flex flex-column justify-content-start vh-100 pt-5"
     >
       <img
         id="logo"
@@ -33,7 +31,7 @@
       <section
         class="main-section container d-flex justify-content-center gap-5 mt-5"
       >
-        <form>
+        <div>
           <div class="form__action d-flex gap-2 align-items-center mb-3">
             <h2>Recent scores</h2>
             <input
@@ -43,15 +41,15 @@
               data-get-all-scores
             />
           </div>
-          <div class="table-border">
+          <div class="table-container">
             <table class="form__scores-table table table-striped mb-0">
               <tbody data-scores-holder>
                 <!-- scores will be auto injected -->
               </tbody>
             </table>
           </div>
-        </form>
-        <form class="add-score-container d-flex flex-column gap-3">
+        </div>
+        <div class="add-score-container d-flex flex-column gap-3">
           <h3>Add your score</h3>
           <input
             type="text"
@@ -69,12 +67,12 @@
             required
           />
           <input
-            type="submit"
+            type="button"
             class="align-self-end btn btn-success"
             value="Submit"
             data-submit-new-score
           />
-        </form>
+        </div>
       </section>
     </main>
     <script
