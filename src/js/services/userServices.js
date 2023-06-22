@@ -1,10 +1,6 @@
-import gameId from './gameId.js';
-
 class UserServices {
   constructor() {
-    (async () => {
-      this.gameId = localStorage.getItem('gameId') || (await gameId());
-    })();
+    this.gameId = localStorage.getItem('gameId');
   }
 
   async addScore(data) {
