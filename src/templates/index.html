@@ -21,16 +21,21 @@
   </head>
   <body>
     <main class="container d-flex flex-column justify-content-center vh-100">
-      <h1 class="align-self-center">Leaderboard</h1>
+      <h1 class="main-header align-self-center">Leaderboard</h1>
       <section
         class="main-section container d-flex justify-content-center gap-5 mt-5"
       >
         <form>
           <div class="form__action d-flex gap-2 align-items-center mb-3">
             <h2>Recent scores</h2>
-            <input type="button" data-get-all-scores value="Refresh" />
+            <input
+              type="button"
+              class="btn btn-success"
+              value="Refresh"
+              data-get-all-scores
+            />
           </div>
-          <div class="border border-dark">
+          <div class="table-border">
             <table class="form__scores-table table table-striped mb-0">
               <tbody data-scores-holder>
                 <!-- scores will be auto injected -->
@@ -45,12 +50,19 @@
             name="name"
             minlength="2"
             maxlength="20"
+            class="form-control"
             required
           />
-          <input type="number" name="score" min="1" required />
+          <input
+            type="number"
+            name="score"
+            min="1"
+            class="form-control"
+            required
+          />
           <input
             type="submit"
-            class="align-self-end"
+            class="align-self-end btn btn-success"
             value="Submit"
             data-submit-new-score
           />
