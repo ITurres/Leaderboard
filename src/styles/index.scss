@@ -9,6 +9,10 @@ body {
   color: $white;
 }
 
+main {
+  overflow: auto;
+}
+
 .main-header {
   font-family: $lexan-font;
   font-size: 2rem;
@@ -27,4 +31,24 @@ body {
 input[name='score'] + span {
   font-weight: 600;
   color: $gold;
+}
+
+.table-container {
+  max-height: 420px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.6rem; /* Mostly for vertical scrollbars */
+    height: 0.7rem; /* Mostly for horizontal scrollbars */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: $gold;
+    border-radius: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    max-height: 200px;
+  }
 }
