@@ -1,2 +1,25 @@
 @import 'base/normalize.css';
 @import 'breakpoints/index-breakpoints.scss';
+@import 'vendor-extensions/bootstrap-overrides.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@200;300;400&family=Montserrat:ital,wght@1,700&family=Poppins:wght@300&display=swap');
+@import 'variables/variables';
+
+body {
+  background: linear-gradient(to bottom, $off-black, $fluor-green);
+  color: #fff;
+}
+
+.main-header {
+  font-family: $lexan-font;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #f0c518;
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.logo {
+  max-width: 120px;
+}
