@@ -1,5 +1,6 @@
 import UserServices from '../services/userServices.js';
 import injectScoresOnDOM from '../markup-injectors/injectScoresOnDOM.js';
+import domMessageOptions from '../utils/DOM/DOMmessage.js';
 
 document
   .querySelector('[data-submit-new-score]')
@@ -18,6 +19,9 @@ document
 
     userName.value = '';
     userScore.value = '';
+
+    domMessageOptions.renderMessage(userScore, 'A new Score has been added.');
+    domMessageOptions.clearMessage(userScore);
   });
 
 document
