@@ -13,7 +13,7 @@ body {
   font-family: $lexan-font;
   font-size: 2rem;
   font-weight: 900;
-  color: #f0c518;
+  color: $gold;
 
   @media (min-width: 768px) {
     font-size: 2.5rem;
@@ -22,4 +22,9 @@ body {
 
 .logo {
   max-width: 120px;
+}
+
+input[name='score'] + span {
+  font-weight: 600;
+  color: $gold;
 }
