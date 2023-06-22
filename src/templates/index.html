@@ -25,40 +25,20 @@
       <section
         class="main-section container d-flex justify-content-center gap-5 mt-5"
       >
-        <form action="" method="get">
+        <form>
           <div class="form__action d-flex gap-2 align-items-center mb-3">
             <h2>Recent scores</h2>
-            <input type="submit" />
+            <input type="button" data-get-all-scores value="Refresh" />
           </div>
           <div class="border border-dark">
             <table class="form__scores-table table table-striped mb-0">
-              <tbody>
-                <tr>
-                  <td>Name: 100</td>
-                </tr>
-                <tr>
-                  <td>Name: 20</td>
-                </tr>
-                <tr>
-                  <td>Name: 50</td>
-                </tr>
-                <tr>
-                  <td>Name: 78</td>
-                </tr>
-                <tr>
-                  <td>Name: 125</td>
-                </tr>
-                <tr>
-                  <td>Name: 77</td>
-                </tr>
-                <tr>
-                  <td>Name: 42</td>
-                </tr>
+              <tbody data-scores-holder>
+                <!-- scores will be auto injected -->
               </tbody>
             </table>
           </div>
         </form>
-        <form action="" method="post" class="add-score-container d-flex flex-column gap-3">
+        <form class="add-score-container d-flex flex-column gap-3">
           <h3>Add your score</h3>
           <input
             type="text"
@@ -68,7 +48,12 @@
             required
           />
           <input type="number" name="score" min="1" required />
-          <input type="submit" class="align-self-end" />
+          <input
+            type="submit"
+            class="align-self-end"
+            value="Submit"
+            data-submit-new-score
+          />
         </form>
       </section>
     </main>
@@ -76,6 +61,5 @@
       src="https://kit.fontawesome.com/5d25a44371.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./bundle.js"></script>
   </body>
 </html>
