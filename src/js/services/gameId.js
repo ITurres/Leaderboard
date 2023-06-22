@@ -24,7 +24,7 @@ const gameId = async () => {
       .split(': ')[1]
       .replace(' added.', '');
 
-    localStorage.setItem('gameId', newGameId);
+    localStorage.setItem('gameId', JSON.parse(newGameId));
   } catch (error) {
     throw new Error(`Failed to create a new game. Error => ${error}`);
   }
