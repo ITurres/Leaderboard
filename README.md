@@ -95,6 +95,7 @@ The **Leaderboard** website displays scores submitted by different players. It a
 ### Key Features <a name="key-features"></a>
 
 - **Dynamic Injection of HTML Markup**
+- **API consumption**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,8 +188,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **API consumption**
-- [ ] **Injection of scores**
+- [x] all fulfilled.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,5 +1,6 @@
 import UserServices from '../services/userServices.js';
 import injectScoresOnDOM from '../markup-injectors/injectScoresOnDOM.js';
+import domMessageOptions from '../utils/DOM/DOMmessage.js';
 
 document
   .querySelector('[data-submit-new-score]')
@@ -15,12 +16,19 @@ document
       user: userName.value,
       score: userScore.value
     });
+
+    userName.value = '';
+    userScore.value = '';
+
+    domMessageOptions.renderMessage(userScore, 'A new Score has been added.');
+    domMessageOptions.clearMessage(userScore);
   });
 
 document
   .querySelector('[data-get-all-scores]')
   .addEventListener('click', async () => {
     const scoresHolder = document.querySelector('[data-scores-holder]');
+    scoresHolder.innerHTML = '';
     const userServices = new UserServices();
     const scores = await userServices.getAllScores();
     injectScoresOnDOM(scoresHolder, scores);

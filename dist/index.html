@@ -9,8 +9,6 @@
       content="website displays scores submitted by different players"
     />
     <meta name="author" content="Arturo Emanuel Guerra Iturres" />
-    <link rel="icon" href="" type="image/png" />
-    <link rel="apple-touch-icon" href="" type="image/png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,43 +16,63 @@
       crossorigin="anonymous"
     />
     <title>Leaderboard</title>
-  <script defer src="bundle.e66977911760f2cd6490.js"></script></head>
+  <link rel="icon" href="assets/favicon.png"><script defer src="bundle.24c02d22fb8f9a492be8.js"></script></head>
   <body>
-    <main class="container d-flex flex-column justify-content-center vh-100">
-      <h1 class="align-self-center">Leaderboard</h1>
+    <main
+      class="container d-flex flex-column justify-content-start vh-100 pt-5"
+    >
+      <img
+        id="logo"
+        class="logo align-self-center"
+        alt="leaderboard logo"
+        width="100%"
+      />
+      <h1 class="main-header align-self-center">Leaderboard</h1>
       <section
         class="main-section container d-flex justify-content-center gap-5 mt-5"
       >
-        <form>
+        <div>
           <div class="form__action d-flex gap-2 align-items-center mb-3">
             <h2>Recent scores</h2>
-            <input type="button" data-get-all-scores value="Refresh" />
+            <input
+              type="button"
+              class="btn btn-success"
+              value="Refresh"
+              data-get-all-scores
+            />
           </div>
-          <div class="border border-dark">
+          <div class="table-container">
             <table class="form__scores-table table table-striped mb-0">
               <tbody data-scores-holder>
                 <!-- scores will be auto injected -->
               </tbody>
             </table>
           </div>
-        </form>
-        <form class="add-score-container d-flex flex-column gap-3">
+        </div>
+        <div class="add-score-container d-flex flex-column gap-3">
           <h3>Add your score</h3>
           <input
             type="text"
             name="name"
             minlength="2"
             maxlength="20"
+            class="form-control"
             required
           />
-          <input type="number" name="score" min="1" required />
           <input
-            type="submit"
-            class="align-self-end"
+            type="number"
+            name="score"
+            min="1"
+            class="form-control"
+            required
+          />
+          <input
+            type="button"
+            class="align-self-end btn btn-success"
             value="Submit"
             data-submit-new-score
           />
-        </form>
+        </div>
       </section>
     </main>
     <script

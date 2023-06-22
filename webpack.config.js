@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -50,6 +51,17 @@ module.exports = {
       title: 'Leaderboard',
       filename: 'index.html',
       template: 'src/templates/index.html'
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/assets/media/leaderboard-icon.png',
+      favicons: {
+        appleStartup: false,
+        icons: {
+          appleIcon: {
+            sizes: [120, 152, 167, 180, 1024]
+          }
+        }
+      }
     })
   ]
 };

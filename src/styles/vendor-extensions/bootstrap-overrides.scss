@@ -1,0 +1,47 @@
+@import '../variables/variables';
+
+.form-control {
+  color: $white;
+  background-color: $off-black;
+
+  &:focus {
+    color: $white;
+    background-color: $off-black;
+    border-color: $fluor-green;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem $fluor-green;
+  }
+}
+
+.btn-success {
+  background-color: $fluor-green;
+  font-weight: 700;
+  color: $off-black;
+
+  &:hover {
+    color: $white;
+    box-shadow: 0 0 0 0.25rem $blue;
+  }
+}
+
+.table-striped > tbody {
+  tr {
+    font-family: $lexan-font;
+    font-size: 1rem;
+  }
+
+  tr:nth-of-type(odd) > * {
+    --bs-table-color-type: $white;
+    --bs-table-bg-type: rgb(24, 24, 24);
+  }
+
+  tr:nth-of-type(even) > * {
+    --bs-table-color-type: var(--bs-table-striped-color);
+    --bs-table-bg-type: #1db94c;
+  }
+}
+
+.table-striped > tbody > tr > td {
+  border: none;
+  border-radius: 0.3rem;
+}
