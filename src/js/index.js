@@ -5,6 +5,6 @@ import gameId from './services/gameId.js';
 
 document.getElementById('logo').src = leadorboardIcon;
 
-if (window.localStorage.length <= 0) {
+if (!localStorage.getItem('gameId')) {
   await gameId();
 }
