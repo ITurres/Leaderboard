@@ -1,9 +1,11 @@
 @media (max-width: 768px) {
   .main-section {
     flex-direction: column;
+    align-items: center;
   }
 
   .add-score-container {
     margin: 0 auto;
+    margin-bottom: 2rem;
   }
 }
