@@ -35,7 +35,8 @@ input[name='score'] + span {
 
 .table-container {
   max-height: 420px;
-  overflow: auto;
+  max-width: 350px;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 0.6rem; /* Mostly for vertical scrollbars */
